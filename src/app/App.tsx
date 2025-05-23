@@ -79,7 +79,7 @@ const App = () => {
       localStorage.setItem('tasks', JSON.stringify(updatedTasks));
       localStorage.removeItem('id');
     } else {
-      const newTask = { ...task, id: uuid(), live: Date.now() + 100000 };
+      const newTask = { ...task, id: uuid(), live: Date.now() + 10000 };
       const updatedTasks = [...tasks, newTask];
       setTasks(updatedTasks);
       localStorage.setItem('tasks', JSON.stringify(updatedTasks));
